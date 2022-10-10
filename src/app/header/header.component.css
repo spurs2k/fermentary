@@ -1,0 +1,118 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: var(--cream);
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 20px;
+}
+
+.toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+}
+
+.toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover,
+.toolbar #youtube-logo:hover {
+    opacity: 0.8;
+}
+
+
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list .list-item {
+    display: inline-block;
+    padding: 30px;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: var(--cream);
+    font-weight: bolder;
+}
+
+.toolbar a:hover {
+    color: #700508;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-line {
+    width: 20px;
+    height: 3px;
+    background-color: #700508;
+    margin-bottom: 4px;
+}
+
+@media all and (max-width: 1040px) {
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        list-style-type: none;
+        width: 150px;
+        text-align: right;
+        display: none;
+        position: absolute;
+        right: 10;
+        top: 95;
+    }
+
+    .nav-list .list-item {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .toolbar a {
+        text-decoration: none;
+        color: rgb(23, 199, 85);
+        font-weight: bolder;
+    }
+
+    .toolbar a:hover {
+        color: #b3613b;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 10;
+        top: 75;
+        cursor: pointer;
+    }
+
+    .nav-list .list-item {
+        display: block;
+        background-color: var(--green);
+    }
+
+    .primary-icon {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .active {
+        display: block;
+        padding: 0;
+    }
+
+}

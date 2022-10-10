@@ -1,0 +1,32 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <a routerLink="">
+        <img width="200" alt="Aalter Beer Vault Logo"
+        src="assets/images/horizontal-logo.png" />
+    </a>
+
+
+        <div class="nav-list-container"> 
+            <ul class="nav-list" [ngClass]="{'active': hamburgerIsActive}">
+                <li class="list-item">
+                    <a routerLink="rigs">Upcoming Events</a>
+                </li>
+                <li class="list-item">
+                    <a routerLink="lines">Build Progress</a>
+                </li>
+                <li class="list-item">
+                    <a routerLink="knots">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu" (click)="menuClicked()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+
+
+
+    
+</div>
