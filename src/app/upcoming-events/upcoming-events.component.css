@@ -1,0 +1,43 @@
+.event-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cream);
+}
+
+img {
+    max-width: 100%;
+    min-width: 200px;
+}
+
+.image {
+    flex-basis: 10%
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.High-Gravity-Title {
+    color: #CA9629;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.girls-on-the-run-link {
+    color: #CA9629;
+}
+
+.location-link {
+    color: white;
+}
+
+a:hover {
+    color: var(--maroon);
+}
+
+.spacer {
+    padding: 30px;
+}

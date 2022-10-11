@@ -1,13 +1,20 @@
 <!-- Toolbar -->
-<div class="toolbar">
+<div class="logo-bar">
 
-    <div class="logo-container">
         <a routerLink="">
             <img class="logo" alt="Aalter Beer Vault Logo"
             src="assets/images/horizontal-logo.png" />
         </a>
-    </div>
 
+        <div class="menu" (click)="menuClicked()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        
+    </div>
+    
+    <div class="toolbar">
         <div class="nav-list-container"> 
             <ul class="nav-list" [ngClass]="{'active': hamburgerIsActive}">
                 <li class="list-item">
@@ -21,11 +28,8 @@
                 </li>
             </ul>
         </div>
-
-        <div class="menu" (click)="menuClicked()">
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-        </div>
+        
 
 </div>
+
+<br>

@@ -1,0 +1,46 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    text-align: center;
+    border: 1px solid var(--cream);
+    background-color: black;
+}
+
+.footer-links {
+    color: var(--cream);
+}
+
+#fa-icon {
+    border: 1px solid red;
+
+}
+
+.footer-links:hover {
+    color: var(--cream);
+}
+
+.fa-pulse-hover {
+    color: var(--cream);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fa-pulse-hover:hover {
+    animation: pulse 1s ease-in-out infinite;
+    color: var(--cream);
+}
