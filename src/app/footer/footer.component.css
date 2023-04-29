@@ -1,29 +1,22 @@
-.footer {
+/* .footer {
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
-    height: 50px;
+    padding-bottom: 10px;
     text-align: center;
-    border: 1px solid var(--cream);
-    background-color: black;
 }
 
 .footer-links {
-    color: var(--cream);
-}
-
-#fa-icon {
-    border: 1px solid red;
-
+    color: var(--blue);
 }
 
 .footer-links:hover {
-    color: var(--cream);
+    color: var(--yellow);
 }
 
-.fa-pulse-hover {
-    color: var(--cream);
+.fa-pulse-hover:hover {
+    animation: pulse 1s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -39,8 +32,4 @@
         transform: scale(1);
     }
 }
-
-.fa-pulse-hover:hover {
-    animation: pulse 1s ease-in-out infinite;
-    color: var(--cream);
-}
+ */
