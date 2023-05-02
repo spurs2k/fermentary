@@ -39,8 +39,8 @@ button:hover {
 }
 
 .shadow {
-    box-shadow: var(--turquoise) 0px 2px 4px,
-        var(--light-gray) 0px 7px 13px -3px;
+    box-shadow: var(--turquoise) 2px 2px 5px,
+        var(--light-gray) 0px 5px 10px -3px;
 }
 
 /* grid templates allow me to set padding for repeated rows and columns. Gap adds padding to all grid items */
@@ -77,10 +77,17 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease-in-out;
 }
 
 .square:hover {
     cursor: pointer;
-    opacity: 90%;
+    transform: scale(1.5);
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
