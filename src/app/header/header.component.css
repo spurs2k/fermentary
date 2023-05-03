@@ -1,6 +1,6 @@
 .logoContainer {
     text-align: center;
-    border: solid 3px var(--blue);
+    border-bottom: solid 2px var(--turquoise);
 }
 
 .logo {
