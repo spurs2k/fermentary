@@ -116,7 +116,7 @@ img {
         grid-template-columns: repeat(2, 130px);
         grid-template-rows: repeat(3, 130px);
         justify-content: center;
-        padding-top: 50px;
+        padding-top: 10px;
     }
 
     .logo {
@@ -125,5 +125,9 @@ img {
 
     .text-overlay p {
         font-size: 15px;
+    }
+
+    body {
+        margin: 0%;
     }
 }
