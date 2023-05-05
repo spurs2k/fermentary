@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.shadow {
+    box-shadow: var(--turquoise) 2px 2px 5px,
+        var(--light-gray) 0px 5px 10px -3px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.grid-item {
+    position: relative;
+    border-radius: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.grid-item:hover img {
+    /* Fades the image when mouseover occurs */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.grid-item:hover::before {
+    /* Displays the alt text of the image as the text on top of the image */
+    /* Adds text on top of the image when mouseover occurs */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .shadow {
+        box-shadow: none;
+    }
+}
+
+.grid-item:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    /* Enlarges the square when mouseover occurs */
+    z-index: 1;
+    box-shadow: none;
+}
+
+
+.grid-container:hover .grid-item:not(:hover) {
+    opacity: 0.5;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.727);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    border-radius: 20px;
+}
+
+.text-overlay p {
+    color: var(--turquoise);
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.text-overlay p span {
+    display: block;
+}
+
+.grid-item:hover .text-overlay {
+    opacity: 1;
+}
+
+
+/* Add mobile settings */
+
+@media screen and (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: repeat(3, 130px);
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .text-overlay {
+        opacity: 1;
+    }
+
+    .text-overlay p {
+        font-size: 15px;
+    }
+
+    body {
+        margin: 5%;
+    }
+}

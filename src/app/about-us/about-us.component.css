@@ -1,0 +1,51 @@
+.flex-containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--blue);
+    padding-top: 20px;
+}
+
+p {
+    color: var(--blue);
+}
+
+img {
+    width: 50%;
+}
+
+.image-container {
+    display: flex;
+    flex: none;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    border: solid 2px var(--turquoise);
+}
+
+figcaption {
+    color: var(--turquoise);
+}
+
+
+@media screen and (max-width: 767px) {
+    .image-container {
+        width: 75%;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+}
+
