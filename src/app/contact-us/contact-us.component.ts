@@ -18,7 +18,7 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitForm () {
+  submitForm() {
   }
 
 }
