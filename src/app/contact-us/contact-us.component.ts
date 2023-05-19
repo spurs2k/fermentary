@@ -19,7 +19,7 @@ export class ContactUsComponent implements OnInit {
   }
 
   submitForm () {
-
+    alert('I am submitting the form');
   }
 
 }
