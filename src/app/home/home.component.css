@@ -44,9 +44,10 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    .shadow {
-        box-shadow: none;
-    }
+}
+
+.grid-item:hover .shadow {
+    box-shadow: none;
 }
 
 .grid-item:hover {
