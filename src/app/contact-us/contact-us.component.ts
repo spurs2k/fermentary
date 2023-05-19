@@ -1,5 +1,4 @@
 import { Component, NgModule, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,10 +9,17 @@ import { FormControl } from '@angular/forms';
 
 export class ContactUsComponent implements OnInit {
 
-  name = new FormControl('');
+  name: string | undefined;
+  email: string | undefined;
+  message: string | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  submitForm () {
+
+  }
+
 }
