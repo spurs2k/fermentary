@@ -8,21 +8,35 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <script src="https://www.google.com/recaptcha/api.js?render=6LcCfSYmAAAAAF-Sjhv8jDAuMgcrgfzZwHCWIGWG"></script>
+
     <script>
-      grecaptcha.ready(function () {
-        grecaptcha.execute('6LcCfSYmAAAAAF-Sjhv8jDAuMgcrgfzZwHCWIGWG', { action: 'submit' }).then(function (token) {
-          console.info("got token: " + token);
-          document.getElementById('g-recaptcha-response').value = token;
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector("form");
+        var recaptchaResponse = document.querySelector("#g-recaptcha-response");
+    
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          grecaptcha.ready(function () {
+            grecaptcha.execute("6LcCfSYmAAAAAF-Sjhv8jDAuMgcrgfzZwHCWIGWG", { action: "submit" }).then(function (token) {
+              recaptchaResponse.value = token;
+              form.submit();
+            });
+          });
         });
       });
     </script>
+    
+
 
   </head>
 
   <body>
 
     <app-root></app-root>
+
+    
 
   </body>
 
