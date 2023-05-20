@@ -4,7 +4,7 @@
 
     <div class="form-container">
 
-        <form action="https://formspree.io/f/mrgvdwzw" method="POST">
+        <form id="contactForm" action="https://formspree.io/f/mrgvdwzw" method="POST">
             <h1 class="contact">Contact Us</h1>
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit'
-                    data-action='submit' (click)="resetForm()">Send</button>
+                data-action='submit'>Send</button>
 
             </div>
         </form>
@@ -33,8 +33,18 @@
 
     <script>
         function onSubmit(token) {
-            document.getElementById("demo-form").submit();
+            document.getElementById("contactForm").submit();
         }
+
+        function resetForm() {
+            document.getElementById("contactForm").reset();
+        }
+
+        window.addEventListener('pageshow', function (event) {
+            if (event.persisted) {
+                resetForm();
+            }
+        });
     </script>
 
 

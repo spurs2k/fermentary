@@ -9,13 +9,6 @@ import { Component, OnInit } from '@angular/core';
 
 export class ContactUsComponent implements OnInit {
 
-  resetForm() {
-    const form = document.querySelector("form");
-    if (form) {
-      form.reset();
-    }
-  }
-
   constructor() { }
 
   ngOnInit(): void {
