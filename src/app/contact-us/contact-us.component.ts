@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,16 +9,10 @@ import { Component, NgModule, OnInit } from '@angular/core';
 
 export class ContactUsComponent implements OnInit {
 
-  name: string | undefined;
-  email: string | undefined;
-  message: string | undefined;
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  submitForm() {
-  }
 
 }
