@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit'
-                    data-action='submit'>Send</button>
+                    data-action='submit' (click)="resetForm()">Send</button>
 
             </div>
         </form>
@@ -38,10 +38,9 @@
     </script>
 
     <script>
-        window.onbeforeunload = () => {
-            for (const form of document.getElementsByTagName('form')) {
-                form.reset();
-            }
+        function resetForm() {
+            const form = document.querySelector("form");
+            form.reset();
         }
     </script>
 
