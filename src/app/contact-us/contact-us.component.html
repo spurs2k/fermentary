@@ -4,8 +4,7 @@
 
     <div class="form-container">
 
-        <form action="https://formspree.io/f/mrgvdwzw"
-        method="POST">
+        <form action="https://formspree.io/f/mrgvdwzw" method="POST">
             <h1 class="contact">Contact Us</h1>
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -20,6 +19,7 @@
                 <textarea name="message" rows="5" required></textarea>
             </div>
             <div class="form-group">
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                 <button type="submit">Send</button>
             </div>
         </form>
@@ -29,4 +29,11 @@
             <img class="facebook" src="/assets/images/facebook.png" alt="">
         </a>
     </div>
+    <script>
+        window.onbeforeunload = () => {
+            for (const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
+        }
+    </script>
 </body>
