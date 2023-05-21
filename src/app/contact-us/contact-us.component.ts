@@ -10,6 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class ContactUsComponent implements OnInit {
 
   contactForm: FormGroup = new FormGroup({});
+  isFormSubmitted: boolean = false;
 
   constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
 
@@ -36,6 +37,7 @@ export class ContactUsComponent implements OnInit {
     (response) => {
       console.log(response);
       this.contactForm.reset();
+      this.isFormSubmitted = true;
     },
     (error) => console.log(error)
   );
