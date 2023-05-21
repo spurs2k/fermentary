@@ -10,6 +10,11 @@ import { OurBeersComponent } from './our-beers/our-beers.component';
 import { FoodComponent } from './food/food.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +30,11 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

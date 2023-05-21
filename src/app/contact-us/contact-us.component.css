@@ -78,6 +78,11 @@ button:hover {
     margin-top: 40px;
 }
 
+/* .success-message {
+    color: var(--turquoise);
+    text-align: center;
+}
+ */
 
 @media (max-width: 480px) {
     body {

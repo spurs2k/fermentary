@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,10 +12,40 @@ import { Component, OnInit } from '@angular/core';
 
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  contactForm: FormGroup = new FormGroup({});
+  isFormSubmitted: boolean = false;
+
+  constructor(private http: HttpClient, private formBuilder: FormBuilder, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.contactForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+    });
   }
 
+  sendPostRequest() {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    };
 
+    const url = 'https://formspree.io/f/mrgvdwzw';
+
+    console.log(this.contactForm.value);
+
+    this.http.post<any>(url, this.contactForm.value, httpOptions).subscribe(
+      (response) => {
+        console.log(response);
+        this.contactForm.reset();
+        this.snackBar.open('Thank you for your message! We will get back to you soon.', 'Close', {
+          duration: 3000,
+          verticalPosition: 'top'
+        });
+      },
+      (error) => console.log(error)
+    );
+  }
 }
