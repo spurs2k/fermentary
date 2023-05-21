@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <button type="submit">Send</button>
-
+                <input class="hidden" type="text" name="_gotcha"/>
             </div>
         </form>
     </div>
@@ -29,14 +29,5 @@
             <img class="facebook" src="/assets/images/facebook.png" alt="">
         </a>
     </div>
-
-    <script>
-        window.onbeforeunload = () => {
-            for (const form of document.getElementsByTagName('form')) {
-                form.reset();
-            }
-        }
-    </script>
-
 
 </body>
